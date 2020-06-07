@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sochu = +prompt("nhap so chu su dung");
+        let tinhtien = null;
+        if (sochu <= 50) {
+            tinhtien = sochu * 1.678;
+        } else if (sochu <= 100 && sochu > 50) {
+            tinhtien = (sochu - 50) * 1.734 + 50 * 1.678;
+        }
+        else if (sochu <= 200 && sochu > 100) {
+            tinhtien = 50 * 1.734 + 50 * 1.678 + (sochu - 100) * 2.014;
+        } else {
+            tinhtien = 50 * 1.734 + 50 * 1.678 + 100 * 2.014 + (sochu - 200) * 2.536;
+        }
+        document.write(tinhtien);
+    </script>
+</body>
+
+</html>
